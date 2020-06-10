@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+    crossorigin
+    src="https://unpkg.com/react@16/umd/react.development.js"
+  ></script>
+
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+  ></script>
+
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body style="background-color:black;">
+    <center><div id="div1"></div></center>
+</body>
+<script  type="text/babel">
+    const div1=document.getElementById("div1")
+    const Orangediv=()=><div style={{width:"50%",height:"300px",backgroundColor:"rgb(255, 102, 0)",marginLeft:"-660px",padding:"10px"}} >
+    <p style={{fontSize:"25px",color:"white",marginLeft:"-5px",marginTop:"10px"}}>Pixel Geek<span style={{fontSize:"14px",color:"whitesmoke",marginLeft:"50px"}}>VIDEOS<span style={{color:"black"}}>&#9632;</span> </span><span style={{fontSize:"14px",color:"whitesmoke",marginLeft:"25px"}}> RAMBLES<span style={{color:"black"}}>&#9632;</span></span>
+        <span style={{fontSize:"14px",color:"whitesmoke",marginLeft:"25px"}}> PROJECTS<span style={{color:"black"}}>&#9632;</span></span><span style={{fontSize:"14px",color:"whitesmoke",marginLeft:"25px"}}> THE OVERFLOW</span> </p>
+    </div>;
+
+    const Whitediv=()=><div style={{width:"1200px",height:"740px",marginTop:"-220px",marginLeft:"-10px",backgroundColor:"white",textAlign:"start",paddingTop:"10px"}}>
+    <p style={{marginTop:"20px",marginLeft:"30px",color:"rgb(255, 102, 0)",fontSize:"55px",fontWeight:"bold"}}>Rejection is hard</p>
+    <hr style={{marginLeft:"30px",width:"500px",marginTop:"-10px"}}></hr >
+    <br/>
+    <p style={{marginTop:"10px",marginLeft:"30px",color:"lightgrey",fontSize:"15px",fontWeight:"bold"}}>FEBRUARY 12, 2019</p>
+    <p style={{fontSize:"22px",color:"black",marginLeft:"30px"}}>We are taught rejection at an early age when want to do <br/> something or get something our parents say "no"</p>
+    <p style={{fontSize:"22px",color:"black",marginLeft:"30px"}}>Rejection also happens when:</p>
+    <ul style={{fontSize:"22px",color:"black",marginLeft:"30px"}} >
+     <li>we are aiming for a certain grade in school and we don't get it</li><br/>
+     <li>you want a boyfriend or girlfriend and he/she says "no.I don't like<br/>you in that way."</li><br/>
+     <li>you go htrough an interview process for a job and you don't get<br/>the position</li><br/>
+     <li>when you work so hard to get a client and your proposals gets <br/>rejected</li>
+      </ul>
+      <p style={{fontSize:"22px",color:"black",marginLeft:"30px"}}>At the root of it all, want something so bad and when life says<br/>no,you can't have it,we get mad and either take it out on someone<br/>else,something else or worse, ourselves.</p>
+      <p style={{fontSize:"22px",color:"black",marginLeft:"30px"}}>Rejection is part of life and its ok to be rejected.</p>
+   
+     </div>;
+
+    const Maindiv= () =>{
+            return (
+                <div style={{width:"90%",height:"850px",backgroundColor:"rgb(78, 69, 69)",marginTop:"-10px"}}>
+                <Orangediv />
+                <Whitediv />
+                </div>
+            );
+        };
+        ReactDOM.render(<Maindiv />,document.getElementById("div1"));
+</script>
+    </html>
+
+
+
+  
