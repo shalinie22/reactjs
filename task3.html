@@ -16,7 +16,7 @@
   <body>
     <div id="list"></div>
     <script type="text/babel">
-      const Counter = (props) => {
+      const Counting= (props) => {
         const [number, setNumber] = React.useState(0);
         const increment = () => {
           setNumber(number + 1);
@@ -32,32 +32,32 @@
           </div>
         );
       };
-      function ListItem(props) {
+      function Lists(props) {
         const value = props.value;
         return <li>{value}</li>;
       }
-      function NumberList(props) {
+      function Number(props) {
         const result = props.result;
-        const listItems = result.map((number) => (
-          <ListItem key={number} value={number} />
+        const list = result.map((number) => (
+          <Lists key={number} value={number} />
         ));
-        return <ul>{listItems}</ul>;
+        return <ul>{list}</ul>;
       }
-      const addcounter = () => {
-        result.push(<Counter />);
+      const Add = () => {
+        result.push(<Counting />);
         ReactDOM.render(
           <div>
-            <NumberList result={result} />
-            <button onClick={addcounter}>Add Counter</button>
+            <Number result={result} />
+            <button onClick={Add}>Add </button>
           </div>,
           document.getElementById("list")
         );
       };
-      const result = [<Counter />];
+      const result = [<Counting />];
       ReactDOM.render(
         <div>
-          <NumberList result={result} />
-          <button onClick={addcounter}>Add Counter</button>
+          <Number result={result} />
+          <button onClick={Add}>Add</button>
         </div>,
         document.getElementById("list")
       );
