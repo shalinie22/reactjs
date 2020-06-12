@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="list"></div>
+    <script type="text/babel">
+      const Counter = (props) => {
+        const [number, setNumber] = React.useState(0);
+        const increment = () => {
+          setNumber(number + 1);
+        };
+        const decrement = () => {
+          setNumber(number - 1);
+        };
+        return (
+          <div>
+            <h1>{number}</h1>
+            <button onClick={increment}>Increment</button>
+            <button onClick={decrement}>Decrement</button>
+          </div>
+        );
+      };
+      function ListItem(props) {
+        const value = props.value;
+        return <li>{value}</li>;
+      }
+      function NumberList(props) {
+        const result = props.result;
+        const listItems = result.map((number) => (
+          <ListItem key={number} value={number} />
+        ));
+        return <ul>{listItems}</ul>;
+      }
+      const addcounter = () => {
+        result.push(<Counter />);
+        ReactDOM.render(
+          <div>
+            <NumberList result={result} />
+            <button onClick={addcounter}>Add Counter</button>
+          </div>,
+          document.getElementById("list")
+        );
+      };
+      const result = [<Counter />];
+      ReactDOM.render(
+        <div>
+          <NumberList result={result} />
+          <button onClick={addcounter}>Add Counter</button>
+        </div>,
+        document.getElementById("list")
+      );
+    </script>
+  </body>
+</html>
