@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <style>
+        .column1{
+            width:50%;
+            height: 200%;
+            float: left;
+            background-color:lightgray;
+        }
+        .column2{
+            width:50%;
+            float: right;
+           height: 200%;
+            background-color: whitesmoke;
+        }
+        .f1{
+            font-size: 1.17em;
+        }
+        .f2{
+            font-size: .67em;
+        }
+        .divh3{
+            background-color: black;
+            width: 50%;
+        }
+        .divh5{
+            background-color: black;
+            width: 25%;
+        }
+        h3{
+            color:whitesmoke;
+        }
+        h5{
+            color: whitesmoke;
+        }
+    </style>
+
+  </head>
+
+  <body>
+    <div id="dd">Hello JAVASCRIPT</div>
+
+    <script type="text/babel">
+
+        const Leftside = ()=>{
+        return(<div className={"column1"} >
+                   <center> <img  src={"shalinie.jpg"}  height={"100px"} width={"100px"} style={{justifyContent: "center"}}/></center>
+                        <center><p className={"f1"}>Shalinie.P<br/><span className={"f2"}>shalushalinie22@gmail.com<br/>no.16,Siva ganapathi nagar,villianur,puducherry-605110</span></p></center>
+                    <div className={"divh3"}><h3>OBJECTIVE :</h3></div>
+                    <p> To work in a challenging and dynamic environment with maximum <br/>
+                    potential where I can utilize and apply my knowledge and skills
+                <br/>by achieving the organization goals</p>
+                <div className={"divh3"}><h3>TECHNICAL SKILLS :</h3></div>
+                <ul>
+                    <li>JAVA</li><br/>
+                    <li>C Programing</li><br/>
+                    <li>Networking</li>
+                </ul>
+                <div className={"divh3"}><h3>COURSES :</h3></div>
+                <ul>
+                    <li>JAVA</li><br/>
+                    <li>C++</li><br/>
+                    <li>INTRODUCTION TO IOT</li>
+                </ul>
+                <div className={"divh3"}><h3>ACHIEVEMENTS :</h3></div>
+                <ul>
+                    <li>Got Bronze certification in India
+                        Innovation Challenge Design Contest
+                        (IICDC) conducted by Texas Instruments
+                        in 2018 .</li><br/>
+                    <li>Completed NPTEL online course with
+                        elite+gold in Introduction to Internet of
+                        Things .</li><br/>
+                    <li>Got appreciation certificate for cent
+                        percent attendance in 2nd year B.tech
+                        course</li>
+                </ul>
+                <div className={"divh3"}><h3>WORKSHOP :</h3></div>
+                <ul>
+                    <li>Testing of Electonics for one day conducted at Sri
+                        Manakula Vinayagar Engineering College in
+                        2017</li><br/>
+                    <li>Embedded Robotics for one day conducted by
+                        Top Engineers at IIT MadrasResearch Park in
+                        2018.</li><br/>
+                    <li>Gaming and Hacking for one day conductedby
+                        wikitechy in 2018.</li>
+                </ul>
+
+                </div>
+        )
+        }
+
+        const Rightside = ()=>{
+            return (
+                <div className={"column2"}>
+                    <div className={"divh3"}><h3>EDUCATION : </h3></div>
+                    <div className={"divh5"}><h5>B.TECH(ECE) :</h5></div>
+                    <ul>
+                        <li>Sri Manakula Vinayagar Engineering College</li><br/>
+                        <li>2016-2020</li><br/>
+                        <li>8.1 CGPA</li>
+                    </ul>
+                    <div className={"divh5"}><h5>HSC :</h5></div>
+                    <ul>
+                        <li>Amalorpavam Hr.Sec.School</li><br/>
+                        <li>2016</li><br/>
+                        <li>85.75 %</li>
+                    </ul>
+                    <div className={"divh5"}><h5>SSLC :</h5></div>
+                    <ul>
+                        <li>St.Joseph of Cluny Hr.Sec.School</li><br/>
+                        <li>2014</li><br/>
+                        <li>93 %</li>
+                    </ul>
+                    <div className={"divh3"}><h3>PERSONAL TRAITS : </h3></div>
+                    <ul>
+                        <li>Self Motivator</li><br/>
+                        <li>Optimistic</li><br/>
+                        <li>Genuine</li><br/>
+                        <li>Flexible</li>
+                    </ul>
+                    <div className={"divh3"}><h3>INDUSTRIAL EXPOSURE : </h3></div>
+                    <ul>
+                        <li>Kaynes Technology ,Mysore.</li><br/>
+                        <li>ACE Components ,Mysore.</li>
+                        
+                    </ul>
+                    <div className={"divh3"}><h3>HOBBIES : </h3></div>
+                    <ul>
+                        <li>Gardening</li><br/>
+                        <li>Playing games</li><br/>
+                        <li>Surfing net</li><br/>
+                        <li>Drawing</li>
+                    </ul>
+                </div>
+            )
+        }
+
+    const Portfolio =()=>{
+        return (
+            <div>
+            <Leftside/>
+            <Rightside/>
+            </div>
+        )
+    }
+
+ ReactDOM.render(<Portfolio />, document.getElementById("dd"));
+    </script>
+  </body>
+</html>
