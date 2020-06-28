@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root">Hello JAVASCRIPT</div>
+
+    <script type="text/babel">
+
+        const TodoApp = () =>{
+            const [val, setVal] = React.useState("");
+            const [todo, setTodo] = React.useState([]);
+
+            const Add =()=>{
+                setTodo(todo.concat([val]));
+                setVal("")
+            };
+            const change =()=>{
+              setTodo(todo.filter((todos, i) => todos !== i))
+            }
+            return (
+                <div>
+                  <input type="text" value={val} onChange={event => setVal(event.target.value)}/>
+                    <button onClick={Add}>add to list</button>
+                    <ul style={{ listStyleType:"none"}}>
+                        {todo.map((todos,index)=>
+                        (<li key={index}><span><input  onClick={()=>setTodo(todo.map((todos, i) => ((index=== i))? todos="XXXXX":todos))} type="checkbox"/></span>{todos} <span>
+                      
+                      <button onClick={()=>setTodo(todo.filter((todos, i) => index!== i))}>X</button></span></li>)
+                       )}
+                    </ul>
+                    </div>
+            );
+        };
+         ReactDOM.render(<TodoApp />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
